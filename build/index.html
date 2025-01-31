@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Tip Calculator App</title>
+    <style>
+        /* Remove arrows in number input */
+        input[type="number"].no-arrows::-webkit-inner-spin-button,
+        input[type="number"].no-arrows::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"].no-arrows {
+            -moz-appearance: textfield; /* Firefox */
+        }
+    </style>
+</head>
+
+<body class="pb-20 lg:pt-10 font-mono bg-lightGrayishCyan lg:px-48">
+    <h1 class="my-9 text-2xl font-bold tracking-[0.5em] text-center uppercase text-darkGrayishCyan lg:my-16">
+        Spli<br>tter</h1>
+    <form id="my-form" class="flex flex-col w-full gap-8 p-10 bg-white rounded-t-3xl lg:rounded-3xl lg:flex-row">
+
+        <div class="flex flex-col gap-9 lg:w-1/2">
+            <div class="flex flex-col gap-2">
+                <label for="bill" class="text-[17px] font-bold text-darkGrayishCyan">Bill</label>
+                <div class="relative w-full">
+                    <span class="absolute mt-2 ml-2 text-2xl text-darkGrayishCyan">$</span>
+                    <input type="number"
+                        class="w-full p-2 text-2xl font-bold text-right rounded focus:ring-2 focus:outline-none focus:ring-strongCyan placeholder-grayishCyan text-veryDarkCyan bg-veryLighhGrayishCyan"
+                        id="bill-input" placeholder="0" step="any">
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <p class="text-[17px] font-bold text-darkGrayishCyan">Select Tip %</p>
+                <div id="buttons-container" class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                    <button type="button"
+                        class="px-8 py-2 text-lg font-bold text-white rounded bg-veryDarkCyan">5%</button>
+                    <button type="button"
+                        class="px-8 py-2 text-lg font-bold text-white rounded bg-veryDarkCyan">10%</button>
+                    <button type="button"
+                        class="px-8 py-2 text-lg font-bold text-white rounded bg-veryDarkCyan">15%</button>
+                    <button type="button"
+                        class="px-8 py-2 text-lg font-bold text-white rounded bg-veryDarkCyan">25%</button>
+                    <button type="button"
+                        class="px-8 py-2 text-lg font-bold text-white rounded bg-veryDarkCyan">50%</button>
+                    <input type="number" id="custom-tip-input" placeholder="Custom"
+                        class="lg:px-4 px-8 py-2 text-lg font-bold rounded bg-veryLighhGrayishCyan text-veryDarkCyan text-center focus:outline-none appearance-none no-arrows" />
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <div class="flex items-center justify-between">
+                    <label for="people" class="text-[17px] font-bold text-darkGrayishCyan">Number of People</label>
+                    <p class="hidden text-red-600" id="error-msg">Can't be zero</p>
+                </div>
+                <div class="relative w-full">
+                    <i class="absolute text-lg transform -translate-y-1/2 fa-solid fa-user left-3 top-1/2 text-grayishCyan"
+                        id="people"></i>
+                    <input type="number"
+                        class="w-full p-2 text-2xl font-bold text-right rounded focus:ring-2 focus:outline-none focus:ring-strongCyan placeholder-grayishCyan text-veryDarkCyan bg-veryLighhGrayishCyan"
+                        id="people-input" placeholder="0" min="0">
+                </div>
+            </div>
+        </div>
+
+
+        <div
+            class="w-full px-5 pb-5 lg:flex lg:flex-col lg:justify-center lg:w-1/2 rounded-xl radius pt-7 bg-veryDarkCyan">
+            <div class="flex">
+                <div class="w-1/2 mb-5">
+                    <p class="mb-[2px] text-sm font-bold text-veryLighhGrayishCyan">Tip Amount</p>
+                    <span class="block text-xs font-bold text-grayishCyan">/ person</span>
+                </div>
+                <div class="w-1/2 text-3xl font-bold text-right text-strongCyan" id="tip-amount">$0.00</div>
+            </div>
+            <div class="flex">
+                <div class="w-1/2 mb-5">
+                    <p class="mb-[2px] text-sm font-bold text-veryLighhGrayishCyan">Total</p>
+                    <span class="block text-xs font-bold text-grayishCyan">/ person</span>
+                </div>
+                <div class="w-1/2 text-3xl font-bold text-right text-strongCyan" id="total-amount">$0.00</div>
+            </div>
+            <button
+                class="w-full py-3 text-xl font-bold uppercase rounded bg-strongCyan text-veryDarkCyan" id="reset-button">Reset</button>
+        </div>
+    </form>
+</body>
+
+<script src="script.js"></script>
+
+</html>
