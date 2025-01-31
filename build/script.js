@@ -30,7 +30,7 @@ function handlePeopleInput() {
 
 function calculateTip() {
 
-    if (peopleValue <= 0 || isNaN) {
+    if (peopleValue <= 0 || isNaN(peopleValue)) {
         tipPerPersonDisplay.innerText = "$0.00";
         totalAmountDisplay.innerText = "$0.00";
         return;

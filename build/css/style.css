@@ -740,10 +740,6 @@ video {
   padding-top: 1.75rem;
 }
 
-.pt-10 {
-  padding-top: 2.5rem;
-}
-
 .text-center {
   text-align: center;
 }
@@ -897,32 +893,17 @@ video {
     border-radius: 1.5rem;
   }
 
-  .lg\:px-48 {
-    padding-left: 12rem;
-    padding-right: 12rem;
-  }
-
   .lg\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 
+  .lg\:px-48 {
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
+
   .lg\:pt-10 {
     padding-top: 2.5rem;
-  }
-
-  .lg\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
-  .lg\:placeholder\:text-sm::-moz-placeholder {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-
-  .lg\:placeholder\:text-sm::placeholder {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
   }
 }
