@@ -15,17 +15,13 @@
             -webkit-appearance: none;
             margin: 0;
         }
-
-        input[type="number"].no-arrows {
-            -moz-appearance: textfield; /* Firefox */
-        }
     </style>
 </head>
 
-<body class="pb-20 lg:pt-10 font-mono bg-lightGrayishCyan lg:px-48">
+<body class="pb-20 font-mono lg:pt-10 bg-lightGrayishCyan lg:px-48">
     <h1 class="my-9 text-2xl font-bold tracking-[0.5em] text-center uppercase text-darkGrayishCyan lg:my-16">
         Spli<br>tter</h1>
-    <form id="my-form" class="flex flex-col w-full gap-8 p-10 bg-white rounded-t-3xl lg:rounded-3xl lg:flex-row">
+    <form id="my-form" class="flex flex-col gap-8 p-10 bg-white lg:max-w-4xl lg:align-center rounded-t-3xl lg:rounded-3xl lg:flex-row">
 
         <div class="flex flex-col gap-9 lg:w-1/2">
             <div class="flex flex-col gap-2">
@@ -40,7 +36,7 @@
 
             <div class="flex flex-col gap-2">
                 <p class="text-[17px] font-bold text-darkGrayishCyan">Select Tip %</p>
-                <div id="buttons-container" class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                <div id="buttons-container" class="grid grid-cols-2 gap-4 lg:grid-cols-3">
                     <button type="button"
                         class="px-8 py-2 text-lg font-bold text-white rounded bg-veryDarkCyan">5%</button>
                     <button type="button"
@@ -52,7 +48,7 @@
                     <button type="button"
                         class="px-8 py-2 text-lg font-bold text-white rounded bg-veryDarkCyan">50%</button>
                     <input type="number" id="custom-tip-input" placeholder="Custom"
-                        class="lg:px-4 px-8 py-2 text-lg font-bold rounded bg-veryLighhGrayishCyan text-veryDarkCyan text-center focus:outline-none appearance-none no-arrows" />
+                        class="px-8 py-2 text-lg font-bold text-center rounded appearance-none lg:px-4 bg-veryLighhGrayishCyan text-veryDarkCyan focus:outline-none no-arrows" />
                 </div>
             </div>
 
